@@ -242,10 +242,10 @@ export default function Solutions() {
             <span className="text-[11px] font-bold text-[#94a3b8] tracking-widest uppercase">One Platform</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-5 tracking-tight" style={{ letterSpacing: '-0.02em' }}>
-            Built for Every Stakeholder<br />in the Ecosystem.
+            One Platform, Four Solutions
           </h2>
           <p className="text-[16px] text-[#6b7280] max-w-xl mx-auto leading-relaxed">
-            Enabled Talent is purpose-built infrastructure for the entire workforce inclusion ecosystem — not just one piece of it.
+            Each stakeholder in the inclusion ecosystem gets a purpose-built portal. Every portal runs on the same data infrastructure — employers, service providers, and funders all stay in sync without manual handoffs.
           </p>
         </div>
 

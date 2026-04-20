@@ -51,133 +51,6 @@ const PRESS_LOGOS = [
 export default function Trust() {
   return (
     <>
-      {/* ── WIN Network ── */}
-      <section className="py-20 px-6 border-t border-white/[0.04]" style={{ background: '#07071a' }}>
-        <div className="max-w-7xl mx-auto text-center">
-          <div
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/[0.08] mb-6"
-            style={{ background: 'rgba(255,255,255,0.03)' }}
-          >
-            <span className="text-[11px] font-bold text-[#94a3b8] tracking-widest uppercase">Powered by WIN</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-4 tracking-tight">
-            Powered by the Workforce Inclusion Network
-          </h2>
-          <p className="text-[15px] text-[#6b7280] max-w-2xl mx-auto mb-14 leading-relaxed">
-            WIN connects employers, governments, NGOs, and educational institutions into one coordinated ecosystem — creating a feedback loop that makes every stakeholder stronger.
-          </p>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-5">
-            {[
-              { icon: '🏢', label: 'Employers', stat: '3,400+', sub: 'Active hiring partners' },
-              { icon: '🎓', label: 'Universities', stat: '120+', sub: 'Institutional partners' },
-              { icon: '🤝', label: 'NGOs & Nodes', stat: '280+', sub: 'Service organizations' },
-              { icon: '🏛️', label: 'Governments', stat: '14', sub: 'Active regions' },
-            ].map(w => (
-              <div
-                key={w.label}
-                className="p-6 rounded-2xl border border-white/[0.07] text-center"
-                style={{ background: '#0d0d24' }}
-              >
-                <div className="text-3xl mb-3">{w.icon}</div>
-                <div className="text-2xl font-black text-white mb-1">{w.stat}</div>
-                <div className="text-sm font-semibold text-[#94a3b8] mb-1">{w.label}</div>
-                <div className="text-[11px] text-[#475569]">{w.sub}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* WIN feature strip */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {[
-              {
-                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="8" cy="15" r="4"/><line x1="10.85" y1="12.15" x2="19" y2="4"/><line x1="18" y1="5" x2="20" y2="7"/><line x1="15" y1="8" x2="17" y2="10"/></svg>,
-                label: 'Single Sign-On',
-                sub: 'One login across the full network',
-              },
-              {
-                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>,
-                label: 'AODA & WCAG 2.1 AA',
-                sub: 'Built-in, not bolted on',
-              },
-              {
-                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>,
-                label: 'PIPEDA Compliant',
-                sub: 'Data stays in your region',
-              },
-              {
-                icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>,
-                label: 'Real-time Sync',
-                sub: 'Every update, everywhere, instantly',
-              },
-            ].map(f => (
-              <div
-                key={f.label}
-                className="flex flex-col items-center gap-3 p-5 rounded-2xl border border-white/[0.06] text-center"
-                style={{ background: 'rgba(255,255,255,0.02)' }}
-              >
-                <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center text-[#f0a500] flex-shrink-0"
-                  style={{ background: 'rgba(240,165,0,0.1)', border: '1px solid rgba(240,165,0,0.15)' }}
-                >
-                  {f.icon}
-                </div>
-                <div>
-                  <div className="text-[12px] font-bold text-white mb-0.5">{f.label}</div>
-                  <div className="text-[11px] text-[#475569]">{f.sub}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Trusted by / Press logos ── */}
-      <section className="py-14 px-6 border-t border-white/[0.04]" style={{ background: '#07071a' }}>
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-[11px] text-[#334155] uppercase tracking-[0.18em] font-bold mb-8">
-            Trusted by organizations building the future of work
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-10">
-            {PRESS_LOGOS.map(logo => (
-              <div key={logo.name} className="flex flex-col items-center gap-0.5">
-                <span className={`${logo.style} text-[#3d4f6b] hover:text-[#6b7280] transition-colors cursor-default select-none`}>
-                  {logo.name}
-                </span>
-                {logo.sub && (
-                  <span className="text-[9px] font-semibold text-[#253146] uppercase tracking-wider">{logo.sub}</span>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA Strip ── */}
-      <section className="px-6 py-6" style={{ background: '#07071a' }}>
-        <div
-          className="max-w-7xl mx-auto rounded-2xl border border-white/[0.08] px-8 py-16 text-center"
-          style={{ background: 'linear-gradient(135deg, #0d0d24 0%, #12122e 100%)' }}
-        >
-          <h2 className="text-3xl sm:text-4xl font-black text-[#f0a500] mb-4 tracking-tight" style={{ letterSpacing: '-0.02em' }}>
-            Ready to upgrade your<br />inclusion infrastructure?
-          </h2>
-          <p className="text-[15px] text-[#6b7280] mb-8 max-w-lg mx-auto leading-relaxed">
-            Join the organizations already using Enabled Talent to close the employment gap — and prove it with data.
-          </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-[#07071a] bg-[#f0a500] hover:bg-[#f5bc3a] transition-colors"
-            style={{ boxShadow: '0 6px 28px rgba(240,165,0,0.25)' }}
-          >
-            Schedule a Demo
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <path d="M2 7h10M8 3l4 4-4 4" />
-            </svg>
-          </a>
-        </div>
-      </section>
-
       {/* ── Foundation of Trust ── */}
       <section className="py-20 px-6 border-t border-white/[0.04]" style={{ background: '#07071a' }}>
         <div className="max-w-7xl mx-auto">
@@ -234,6 +107,52 @@ export default function Trust() {
               <div className="text-[12px] text-[#6b7280] leading-tight">uptime<br />SLA</div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Trusted by / Press logos ── */}
+      <section className="py-14 px-6 border-t border-white/[0.04]" style={{ background: '#07071a' }}>
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-[11px] text-[#334155] uppercase tracking-[0.18em] font-bold mb-8">
+            Trusted by organizations building the future of work
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-10">
+            {PRESS_LOGOS.map(logo => (
+              <div key={logo.name} className="flex flex-col items-center gap-0.5">
+                <span className={`${logo.style} text-[#3d4f6b] hover:text-[#6b7280] transition-colors cursor-default select-none`}>
+                  {logo.name}
+                </span>
+                {logo.sub && (
+                  <span className="text-[9px] font-semibold text-[#253146] uppercase tracking-wider">{logo.sub}</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA Strip ── */}
+      <section className="px-6 py-6" style={{ background: '#07071a' }}>
+        <div
+          className="max-w-7xl mx-auto rounded-2xl border border-white/[0.08] px-8 py-16 text-center"
+          style={{ background: 'linear-gradient(135deg, #0d0d24 0%, #12122e 100%)' }}
+        >
+          <h2 className="text-3xl sm:text-4xl font-black text-[#f0a500] mb-4 tracking-tight" style={{ letterSpacing: '-0.02em' }}>
+            Ready to upgrade your<br />inclusion infrastructure?
+          </h2>
+          <p className="text-[15px] text-[#6b7280] mb-8 max-w-lg mx-auto leading-relaxed">
+            Join the organizations already using Enabled Talent to close the employment gap — and prove it with data.
+          </p>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-[#07071a] bg-[#f0a500] hover:bg-[#f5bc3a] transition-colors"
+            style={{ boxShadow: '0 6px 28px rgba(240,165,0,0.25)' }}
+          >
+            Schedule a Demo
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <path d="M2 7h10M8 3l4 4-4 4" />
+            </svg>
+          </a>
         </div>
       </section>
     </>
