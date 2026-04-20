@@ -1,3 +1,147 @@
+function UniversitiesVisual() {
+  return (
+    <div className="rounded-xl border border-white/[0.07] p-4 mb-6" style={{ background: 'rgba(255,255,255,0.02)' }}>
+      <div className="text-[10px] text-[#475569] uppercase tracking-wider font-semibold mb-3">Graduate Employment Rate — Disabilities</div>
+      <div className="flex items-end gap-2.5 h-24 mb-3">
+        {[
+          { h: '42%', yr: '2021', val: '41%' },
+          { h: '56%', yr: '2022', val: '54%' },
+          { h: '100%', yr: '2023', val: '67%', active: true },
+        ].map(b => (
+          <div key={b.yr} className="flex-1 flex flex-col items-center gap-1.5">
+            <span className="text-[9px] font-bold" style={{ color: b.active ? '#f0a500' : '#334155' }}>{b.val}</span>
+            <div
+              className="w-full rounded-t-lg transition-all"
+              style={{
+                height: b.h,
+                background: b.active ? '#f0a500' : 'rgba(240,165,0,0.2)',
+              }}
+            />
+            <span className="text-[9px] text-[#334155]">{b.yr}</span>
+          </div>
+        ))}
+      </div>
+      <div className="flex items-center justify-between pt-2 border-t border-white/[0.05]">
+        <div className="flex items-center gap-2">
+          <span className="text-[20px] font-black text-[#f0a500]">33%</span>
+          <span className="text-[11px] text-[#475569]">Employment Gap</span>
+        </div>
+        <span className="text-[10px] text-green-400 font-semibold">↑ Improving</span>
+      </div>
+    </div>
+  )
+}
+
+function NGOsVisual() {
+  return (
+    <div className="rounded-xl border border-white/[0.07] p-4 mb-6" style={{ background: 'rgba(255,255,255,0.02)' }}>
+      <div className="flex items-center justify-between mb-4">
+        <div>
+          <div className="text-[24px] font-black text-white leading-none">1,248</div>
+          <div className="text-[10px] text-[#475569] mt-0.5">Active client cases</div>
+        </div>
+        <div className="text-right">
+          <div className="text-[24px] font-black text-[#f0a500] leading-none">60%</div>
+          <div className="text-[10px] text-[#475569] mt-0.5">Less admin time</div>
+        </div>
+      </div>
+      <div className="space-y-2">
+        {[
+          { name: 'Flow Rate Activated', status: 'Automated', color: '#4ade80' },
+          { name: 'Funder Report Generated', status: 'Complete', color: '#f0a500' },
+          { name: 'New Placement Logged', status: 'Live sync', color: '#818cf8' },
+        ].map(item => (
+          <div key={item.name} className="flex items-center justify-between px-3 py-2 rounded-lg border border-white/[0.05]" style={{ background: 'rgba(255,255,255,0.02)' }}>
+            <span className="text-[11px] text-[#6b7280]">{item.name}</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ color: item.color, background: `${item.color}15` }}>{item.status}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function GovernmentsVisual() {
+  const pct = 98.4
+  const r = 36
+  const circ = 2 * Math.PI * r
+  const dash = (pct / 100) * circ
+  return (
+    <div className="rounded-xl border border-white/[0.07] p-4 mb-6" style={{ background: 'rgba(255,255,255,0.02)' }}>
+      <div className="text-[10px] text-[#475569] uppercase tracking-wider font-semibold mb-4">Funding Allocation — Region 04</div>
+      <div className="flex items-center gap-6">
+        <div className="relative flex-shrink-0">
+          <svg width="90" height="90" viewBox="0 0 90 90">
+            <circle cx="45" cy="45" r={r} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="8" />
+            <circle
+              cx="45" cy="45" r={r} fill="none"
+              stroke="#f0a500" strokeWidth="8"
+              strokeDasharray={`${dash} ${circ}`}
+              strokeLinecap="round"
+              transform="rotate(-90 45 45)"
+            />
+          </svg>
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <span className="text-[16px] font-black text-white leading-none">98.4%</span>
+            <span className="text-[8px] text-[#475569]">utilized</span>
+          </div>
+        </div>
+        <div className="flex-1 space-y-2.5">
+          {[
+            { label: 'Employment Services', pct: 42 },
+            { label: 'Training Programs', pct: 31 },
+            { label: 'Accessibility Grants', pct: 25 },
+          ].map(row => (
+            <div key={row.label}>
+              <div className="flex justify-between mb-1">
+                <span className="text-[10px] text-[#475569]">{row.label}</span>
+                <span className="text-[10px] font-bold text-[#94a3b8]">{row.pct}%</span>
+              </div>
+              <div className="h-1.5 rounded-full" style={{ background: 'rgba(255,255,255,0.06)' }}>
+                <div className="h-full rounded-full bg-[#f0a500]" style={{ width: `${row.pct}%`, opacity: 0.7 }} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function EmployersVisual() {
+  return (
+    <div className="rounded-xl border border-white/[0.07] p-4 mb-6" style={{ background: 'rgba(255,255,255,0.02)' }}>
+      <div className="text-[10px] text-[#475569] uppercase tracking-wider font-semibold mb-3">Candidate Match Index</div>
+      <div className="space-y-3">
+        {[
+          { init: 'A', name: 'Alex Rivers', role: 'UX Designer · Low vision', score: 94, bar: '94%' },
+          { init: 'J', name: 'Jordan Smith', role: 'Data Analyst · ADHD', score: 83, bar: '83%' },
+          { init: 'M', name: 'Maya Patel', role: 'Dev Lead · Deaf', score: 91, bar: '91%' },
+        ].map(c => (
+          <div key={c.name} className="flex items-center gap-3">
+            <div
+              className="w-8 h-8 rounded-full flex items-center justify-center text-[11px] font-black flex-shrink-0"
+              style={{ background: 'rgba(240,165,0,0.15)', color: '#f0a500' }}
+            >
+              {c.init}
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-[11px] font-semibold text-white">{c.name}</span>
+                <span className="text-[12px] font-black text-[#f0a500]">{c.score}%</span>
+              </div>
+              <div className="h-1.5 rounded-full" style={{ background: 'rgba(255,255,255,0.06)' }}>
+                <div className="h-full rounded-full bg-[#f0a500]" style={{ width: c.bar, opacity: 0.8 }} />
+              </div>
+              <div className="text-[9px] text-[#334155] mt-0.5">{c.role}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 const CARDS = [
   {
     id: 'universities',
@@ -8,6 +152,7 @@ const CARDS = [
         <path d="M6 12v5c3 3 9 3 12 0v-5" />
       </svg>
     ),
+    visual: <UniversitiesVisual />,
     headline: 'Close the employment gap your campus is already accountable for.',
     body: 'Only 33% of students with disabilities are employed within a year of graduation. Enabled Talent connects your career centre and disability services office into one gated system where your institution controls employer access, moderates every job posting, and owns its data with zero cross-tenant leakage. NACE compliant reporting is built in.',
     stats: [
@@ -27,6 +172,7 @@ const CARDS = [
         <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
+    visual: <NGOsVisual />,
     headline: 'Replace spreadsheets with a system that connects your clients to employers directly.',
     body: 'Manage caseloads, track employer relationships, and report to funders from one platform. Each client\'s accommodation needs, job readiness, and placement status are visible in real time across your team.',
     stats: [
@@ -49,6 +195,7 @@ const CARDS = [
         <polygon points="12 2 20 7 4 7" />
       </svg>
     ),
+    visual: <GovernmentsVisual />,
     headline: 'Fund employment programs and see exactly where every dollar goes.',
     body: 'Deploy regional or national inclusion strategies with built-in program accountability. Track outcomes across every service provider, employer, and candidate in your network with audit ready reporting and compliant funding allocation.',
     stats: [
@@ -69,6 +216,7 @@ const CARDS = [
         <line x1="10" y1="14" x2="14" y2="14" />
       </svg>
     ),
+    visual: <EmployersVisual />,
     headline: 'Hire inclusively without guessing what support looks like.',
     body: 'Every candidate arrives with a completed accommodation profile and a connected support team. Your HR team receives pre-matched candidates, onboarding guidance, and built-in compliance reporting for AODA, ESG, and DEI commitments.',
     stats: [
@@ -112,10 +260,7 @@ export default function Solutions() {
             >
               {/* Category tag + icon row */}
               <div className="flex items-start justify-between mb-6">
-                <span
-                  className="text-[10px] font-black tracking-[0.14em] uppercase text-[#94a3b8]"
-                  style={{ letterSpacing: '0.12em' }}
-                >
+                <span className="text-[10px] font-black tracking-[0.12em] uppercase text-[#94a3b8]">
                   {card.category}
                 </span>
                 <div
@@ -130,6 +275,9 @@ export default function Solutions() {
               <h3 className="text-xl sm:text-[22px] font-black text-white leading-tight mb-4" style={{ letterSpacing: '-0.015em' }}>
                 {card.headline}
               </h3>
+
+              {/* Visual mockup */}
+              {card.visual}
 
               {/* Body */}
               <p className="text-[14px] text-[#6b7280] leading-[1.7] mb-8 flex-1">
