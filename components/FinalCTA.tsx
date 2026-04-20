@@ -1,6 +1,6 @@
 export default function FinalCTA() {
   return (
-    <section id="contact" className="py-28 px-6 border-t border-white/[0.04]" style={{ background: '#05050f' }}>
+    <section id="contact" className="py-28 px-6 border-t border-white/[0.04] scroll-mt-16" style={{ background: '#05050f' }}>
       <div className="max-w-3xl mx-auto text-center">
 
         {/* Dot grid */}

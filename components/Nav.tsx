@@ -24,13 +24,16 @@ export default function Nav() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
-          {['For Universities', 'For Governments'].map(link => (
+          {[
+            { label: 'For Universities', href: '#universities' },
+            { label: 'For Governments', href: '#governments' },
+          ].map(link => (
             <a
-              key={link}
-              href="#"
+              key={link.label}
+              href={link.href}
               className="text-[14px] text-[#6b7280] hover:text-white transition-colors duration-200 font-medium"
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </div>
@@ -71,9 +74,12 @@ export default function Nav() {
           className="md:hidden px-6 py-5 flex flex-col gap-5"
           style={{ borderTop: '1px solid rgba(255,255,255,0.05)', background: '#05050f' }}
         >
-          {['For Universities', 'For Governments'].map(link => (
-            <a key={link} href="#" className="text-sm font-medium text-[#6b7280] hover:text-white transition-colors">
-              {link}
+          {[
+            { label: 'For Universities', href: '#universities' },
+            { label: 'For Governments', href: '#governments' },
+          ].map(link => (
+            <a key={link.label} href={link.href} className="text-sm font-medium text-[#6b7280] hover:text-white transition-colors">
+              {link.label}
             </a>
           ))}
           <div className="flex items-center gap-3 pt-1">

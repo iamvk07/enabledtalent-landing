@@ -279,7 +279,7 @@ const MOCKUPS: Record<string, React.ReactNode> = {
 
 export default function Solutions() {
   return (
-    <section id="solutions" className="bg-white">
+    <section id="solutions" className="bg-white scroll-mt-16">
       {/* Section header */}
       <div className="py-20 px-6 text-center" style={{ borderBottom: '1px solid #f1f5f9' }}>
         <div
@@ -300,7 +300,8 @@ export default function Solutions() {
       {SOLUTIONS.map((s) => (
         <div
           key={s.id}
-          className="px-6 py-20"
+          id={s.id}
+          className="px-6 py-20 scroll-mt-20"
           style={{ borderBottom: '1px solid #f1f5f9', background: s.flip ? '#fafafa' : '#ffffff' }}
         >
           <div className="max-w-7xl mx-auto">
