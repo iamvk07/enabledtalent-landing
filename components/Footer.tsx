@@ -8,8 +8,8 @@ const NAV = [
     links: ['Enabled Veterans', 'ENABLE Canada Tour', 'Enabled Foundation'],
   },
   {
-    heading: 'Research & Knowledge',
-    links: ['Case Studies', 'Guides', 'Reports', 'Webinars', 'News & Insights'],
+    heading: 'Research, Policy & Knowledge',
+    links: ['Case Studies', 'Guides', 'Reports', 'Webinars', 'News & Insights', 'Articles & Interviews'],
   },
   {
     heading: 'Regional Platforms',
