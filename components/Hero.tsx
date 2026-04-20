@@ -60,7 +60,7 @@ export default function Hero() {
                 </svg>
               </a>
               <a
-                href="#solutions"
+                href="#how-it-works"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-semibold text-[#c8d5e8] border hover:text-white hover:bg-white/[0.04] transition-all text-[15px]"
                 style={{ borderColor: 'rgba(255,255,255,0.12)' }}
               >

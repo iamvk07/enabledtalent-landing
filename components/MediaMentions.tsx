@@ -1,3 +1,10 @@
+const LOGOS = [
+  { name: 'betakit', style: 'font-black text-[15px] tracking-tight italic' },
+  { name: 'FP', style: 'font-black text-[17px] tracking-tight', sub: 'Financial Post' },
+  { name: 'FOUNDERS', style: 'font-black text-[13px] tracking-[0.08em]' },
+  { name: 'NP', style: 'font-black text-[17px] tracking-tight', sub: 'National Post' },
+]
+
 export default function MediaMentions() {
   return (
     <section className="py-10 px-6 border-y border-white/[0.04]" style={{ background: '#05050f' }}>
@@ -8,18 +15,15 @@ export default function MediaMentions() {
           </p>
           <div className="w-px h-5 bg-white/[0.06] hidden sm:block flex-shrink-0" />
           <div className="flex items-center gap-10 flex-wrap justify-center sm:justify-start">
-            {[
-              { name: 'Financial Post', style: 'font-black text-[13px]' },
-              { name: 'betakit', style: 'font-black text-[14px] tracking-tight' },
-              { name: 'Founders', style: 'font-bold text-[13px] italic' },
-              { name: 'National Post', style: 'font-black text-[13px]' },
-            ].map(m => (
-              <span
-                key={m.name}
-                className={`${m.style} text-[#2d3d56] hover:text-[#475569] transition-colors cursor-default select-none`}
-              >
-                {m.name}
-              </span>
+            {LOGOS.map(logo => (
+              <div key={logo.name} className="flex flex-col items-center gap-0.5">
+                <span className={`${logo.style} text-[#3d4f6b] hover:text-[#6b7280] transition-colors cursor-default select-none`}>
+                  {logo.name}
+                </span>
+                {logo.sub && (
+                  <span className="text-[9px] font-semibold text-[#253146] uppercase tracking-wider">{logo.sub}</span>
+                )}
+              </div>
             ))}
           </div>
         </div>
