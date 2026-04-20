@@ -1,5 +1,6 @@
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
+import MediaMentions from '@/components/MediaMentions'
 import Solutions from '@/components/Solutions'
 import HowItWorks from '@/components/HowItWorks'
 import Trust from '@/components/Trust'
@@ -12,6 +13,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <MediaMentions />
         <Solutions />
         <HowItWorks />
         <Trust />
