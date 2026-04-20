@@ -5,10 +5,10 @@ export default function Nav() {
   const [open, setOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06] bg-[#07071a]/90 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.06] bg-[#07071a]/95 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 flex-shrink-0">
+        <a href="/" className="flex items-center gap-2.5 flex-shrink-0">
           <div className="w-7 h-7 rounded-md bg-[#f0a500] flex items-center justify-center">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <circle cx="7" cy="7" r="3" fill="#07071a" />
@@ -20,7 +20,7 @@ export default function Nav() {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
-          {['Products', 'Our Initiatives', 'Research', 'Company'].map(link => (
+          {['For Universities', 'For Governments'].map(link => (
             <a key={link} href="#" className="text-sm text-[#94a3b8] hover:text-white transition-colors duration-200">
               {link}
             </a>
@@ -28,13 +28,17 @@ export default function Nav() {
         </div>
 
         {/* CTA */}
-        <div className="hidden md:flex items-center gap-3">
-          <a href="#" className="text-sm text-[#94a3b8] hover:text-white transition-colors px-3 py-2">Login</a>
+        <div className="hidden md:flex items-center gap-4">
+          {/* Canadian flag */}
+          <span className="text-xl" title="Canada">🇨🇦</span>
           <a
             href="#contact"
-            className="text-sm font-semibold px-4 py-2 rounded-lg text-[#07071a] bg-[#f0a500] hover:bg-[#f5bc3a] transition-colors duration-200"
+            className="text-sm font-semibold px-5 py-2 rounded-full text-[#07071a] bg-[#f0a500] hover:bg-[#f5bc3a] transition-colors duration-200 flex items-center gap-1.5"
           >
-            Get a Demo
+            Contact Sales
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M2 6h8M6 2l4 4-4 4" />
+            </svg>
           </a>
         </div>
 
@@ -52,12 +56,15 @@ export default function Nav() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-white/[0.06] bg-[#07071a] px-6 py-4 flex flex-col gap-4">
-          {['Products', 'Our Initiatives', 'Research', 'Company'].map(link => (
+          {['For Universities', 'For Governments'].map(link => (
             <a key={link} href="#" className="text-sm text-[#94a3b8] hover:text-white transition-colors">{link}</a>
           ))}
-          <a href="#contact" className="text-sm font-semibold px-4 py-2 rounded-lg text-center text-[#07071a] bg-[#f0a500]">
-            Get a Demo
-          </a>
+          <div className="flex items-center gap-3 pt-2">
+            <span className="text-xl">🇨🇦</span>
+            <a href="#contact" className="flex-1 text-sm font-semibold px-5 py-2 rounded-full text-center text-[#07071a] bg-[#f0a500]">
+              Contact Sales →
+            </a>
+          </div>
         </div>
       )}
     </nav>
