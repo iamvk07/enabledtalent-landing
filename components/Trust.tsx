@@ -51,6 +51,52 @@ const PRESS_LOGOS = [
 export default function Trust() {
   return (
     <>
+      {/* ── Trusted by / Press logos ── */}
+      <section className="py-14 px-6 border-t border-white/[0.04]" style={{ background: '#07071a' }}>
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-[11px] text-[#334155] uppercase tracking-[0.18em] font-bold mb-8">
+            Trusted by organizations building the future of work
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-10">
+            {PRESS_LOGOS.map(logo => (
+              <div key={logo.name} className="flex flex-col items-center gap-0.5">
+                <span className={`${logo.style} text-[#3d4f6b] hover:text-[#6b7280] transition-colors cursor-default select-none`}>
+                  {logo.name}
+                </span>
+                {logo.sub && (
+                  <span className="text-[9px] font-semibold text-[#253146] uppercase tracking-wider">{logo.sub}</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA Strip ── */}
+      <section className="px-6 py-6" style={{ background: '#07071a' }}>
+        <div
+          className="max-w-7xl mx-auto rounded-2xl border border-white/[0.08] px-8 py-16 text-center"
+          style={{ background: 'linear-gradient(135deg, #0d0d24 0%, #12122e 100%)' }}
+        >
+          <h2 className="text-3xl sm:text-4xl font-black text-[#f0a500] mb-4 tracking-tight" style={{ letterSpacing: '-0.02em' }}>
+            Ready to upgrade your<br />inclusion infrastructure?
+          </h2>
+          <p className="text-[15px] text-[#6b7280] mb-8 max-w-lg mx-auto leading-relaxed">
+            Join the organizations already using Enabled Talent to close the employment gap — and prove it with data.
+          </p>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-[#07071a] bg-[#f0a500] hover:bg-[#f5bc3a] transition-colors"
+            style={{ boxShadow: '0 6px 28px rgba(240,165,0,0.25)' }}
+          >
+            Schedule a Demo
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <path d="M2 7h10M8 3l4 4-4 4" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
       {/* ── Foundation of Trust ── */}
       <section className="py-20 px-6 border-t border-white/[0.04]" style={{ background: '#07071a' }}>
         <div className="max-w-7xl mx-auto">
@@ -107,52 +153,6 @@ export default function Trust() {
               <div className="text-[12px] text-[#6b7280] leading-tight">uptime<br />SLA</div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ── Trusted by / Press logos ── */}
-      <section className="py-14 px-6 border-t border-white/[0.04]" style={{ background: '#07071a' }}>
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-[11px] text-[#334155] uppercase tracking-[0.18em] font-bold mb-8">
-            Trusted by organizations building the future of work
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-10">
-            {PRESS_LOGOS.map(logo => (
-              <div key={logo.name} className="flex flex-col items-center gap-0.5">
-                <span className={`${logo.style} text-[#3d4f6b] hover:text-[#6b7280] transition-colors cursor-default select-none`}>
-                  {logo.name}
-                </span>
-                {logo.sub && (
-                  <span className="text-[9px] font-semibold text-[#253146] uppercase tracking-wider">{logo.sub}</span>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA Strip ── */}
-      <section className="px-6 py-6" style={{ background: '#07071a' }}>
-        <div
-          className="max-w-7xl mx-auto rounded-2xl border border-white/[0.08] px-8 py-16 text-center"
-          style={{ background: 'linear-gradient(135deg, #0d0d24 0%, #12122e 100%)' }}
-        >
-          <h2 className="text-3xl sm:text-4xl font-black text-[#f0a500] mb-4 tracking-tight" style={{ letterSpacing: '-0.02em' }}>
-            Ready to upgrade your<br />inclusion infrastructure?
-          </h2>
-          <p className="text-[15px] text-[#6b7280] mb-8 max-w-lg mx-auto leading-relaxed">
-            Join the organizations already using Enabled Talent to close the employment gap — and prove it with data.
-          </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-[#07071a] bg-[#f0a500] hover:bg-[#f5bc3a] transition-colors"
-            style={{ boxShadow: '0 6px 28px rgba(240,165,0,0.25)' }}
-          >
-            Schedule a Demo
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <path d="M2 7h10M8 3l4 4-4 4" />
-            </svg>
-          </a>
         </div>
       </section>
     </>
