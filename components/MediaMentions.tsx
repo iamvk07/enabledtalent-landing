@@ -11,7 +11,7 @@ export default function MediaMentions() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-12">
           <p className="text-[10px] text-[#283040] uppercase tracking-[0.18em] font-bold whitespace-nowrap flex-shrink-0">
-            As featured in
+            Trusted by organizations building the future of work
           </p>
           <div className="w-px h-5 bg-white/[0.06] hidden sm:block flex-shrink-0" />
           <div className="flex items-center gap-10 flex-wrap justify-center sm:justify-start">
