@@ -1,25 +1,16 @@
 export default function Hero() {
   return (
-    <section className="relative pt-28 pb-24 px-6 overflow-hidden" style={{ background: '#05050f' }}>
-      {/* Background layers */}
+    <section className="relative pt-28 pb-24 px-6 overflow-hidden" style={{ background: '#eff4ff' }}>
+      {/* Subtle background decoration */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
-          className="absolute top-[-150px] left-1/2 -translate-x-1/2 w-[1100px] h-[750px] rounded-full"
-          style={{ background: 'radial-gradient(ellipse, rgba(240,165,0,0.08) 0%, transparent 68%)', filter: 'blur(1px)' }}
+          className="absolute top-[-100px] right-[-100px] w-[700px] h-[700px] rounded-full"
+          style={{ background: 'radial-gradient(ellipse, rgba(240,165,0,0.06) 0%, transparent 70%)' }}
         />
         <div
-          className="absolute top-[180px] right-[-80px] w-[650px] h-[650px] rounded-full"
-          style={{ background: 'radial-gradient(ellipse, rgba(99,102,241,0.05) 0%, transparent 70%)', filter: 'blur(1px)' }}
+          className="absolute bottom-[-50px] left-[-50px] w-[500px] h-[500px] rounded-full"
+          style={{ background: 'radial-gradient(ellipse, rgba(99,102,241,0.04) 0%, transparent 70%)' }}
         />
-        <div
-          className="absolute bottom-0 left-0 right-0 h-40"
-          style={{ background: 'linear-gradient(to top, #05050f, transparent)' }}
-        />
-        {/* Subtle grid */}
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px)',
-          backgroundSize: '52px 52px',
-        }} />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -29,13 +20,13 @@ export default function Hero() {
           <div className="pt-4 lg:pt-0">
 
             {/* Location badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#f0a500]/25 bg-[#f0a500]/[0.07] mb-9">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#f0a500]/40 bg-[#f0a500]/[0.08] mb-9">
               <span className="w-2 h-2 rounded-full bg-[#f0a500] flex-shrink-0" style={{ boxShadow: '0 0 8px #f0a500' }} />
-              <span className="text-[11px] font-extrabold text-[#f0a500] tracking-[0.15em] uppercase">Now Live in Northern Ontario</span>
+              <span className="text-[11px] font-extrabold text-[#c47e00] tracking-[0.15em] uppercase">Now Live in Northern Ontario</span>
             </div>
 
             {/* Headline */}
-            <h1 className="mb-8 text-white" style={{ fontWeight: 900, lineHeight: 1.03, letterSpacing: '-0.025em' }}>
+            <h1 className="mb-8" style={{ fontWeight: 900, lineHeight: 1.03, letterSpacing: '-0.025em', color: '#07071a' }}>
               <span className="block text-[44px] sm:text-[52px] lg:text-[58px] xl:text-[66px]">The Employment</span>
               <span className="block text-[44px] sm:text-[52px] lg:text-[58px] xl:text-[66px]">Infrastructure Layer</span>
               <span className="block text-[44px] sm:text-[52px] lg:text-[58px] xl:text-[66px]">for Workforce</span>
@@ -43,7 +34,7 @@ export default function Hero() {
             </h1>
 
             {/* Subtext */}
-            <p className="text-[17px] text-[#8494af] leading-[1.72] mb-10 max-w-[490px]">
+            <p className="text-[17px] leading-[1.72] mb-10 max-w-[490px]" style={{ color: '#4b5563' }}>
               Universities, NGOs, and governments deploy Enabled Talent as the system connecting disability services, employers, and talent into one accountable workflow.
             </p>
 
@@ -52,7 +43,7 @@ export default function Hero() {
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-bold text-[#07071a] bg-[#f0a500] hover:bg-[#f5bc3a] transition-all text-[15px]"
-                style={{ boxShadow: '0 6px 30px rgba(240,165,0,0.28)' }}
+                style={{ boxShadow: '0 6px 30px rgba(240,165,0,0.35)' }}
               >
                 Deploy Enabled Talent
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -61,8 +52,8 @@ export default function Hero() {
               </a>
               <a
                 href="#how-it-works"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-semibold text-[#c8d5e8] border hover:text-white hover:bg-white/[0.04] transition-all text-[15px]"
-                style={{ borderColor: 'rgba(255,255,255,0.12)' }}
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-semibold border hover:bg-[#07071a]/[0.04] transition-all text-[15px]"
+                style={{ borderColor: 'rgba(7,7,26,0.15)', color: '#374151' }}
               >
                 See how it works
               </a>
@@ -70,7 +61,7 @@ export default function Hero() {
 
             {/* Partner badges */}
             <div>
-              <p className="text-[10px] text-[#2d3d56] uppercase tracking-[0.18em] font-bold mb-5">
+              <p className="text-[10px] uppercase tracking-[0.18em] font-bold mb-5" style={{ color: '#9ca3af' }}>
                 Backed by the world&apos;s leading programs
               </p>
               <div className="flex items-end gap-8 flex-wrap">
@@ -81,20 +72,19 @@ export default function Hero() {
                   { name: 'UNICEF', program: 'Startup Lab' },
                 ].map(l => (
                   <div key={l.name} className="flex flex-col gap-0.5">
-                    <span className="text-[13px] font-black text-[#3d4f6b] leading-none">{l.name}</span>
-                    <span className="text-[9px] font-semibold text-[#253146] tracking-wider uppercase leading-none">{l.program}</span>
+                    <span className="text-[13px] font-black leading-none" style={{ color: '#6b7280' }}>{l.name}</span>
+                    <span className="text-[9px] font-semibold tracking-wider uppercase leading-none" style={{ color: '#9ca3af' }}>{l.program}</span>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* ─── RIGHT: Dashboard Mockup ─── */}
+          {/* ─── RIGHT: Dashboard Mockup (dark card = contrast element per Figma) ─── */}
           <div className="relative hidden lg:block">
-            {/* Main card */}
             <div
               className="rounded-2xl overflow-hidden border border-white/[0.07]"
-              style={{ boxShadow: '0 50px 120px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.04)' }}
+              style={{ boxShadow: '0 50px 120px rgba(7,7,26,0.18), 0 0 0 1px rgba(0,0,0,0.06)' }}
             >
               {/* Browser chrome */}
               <div className="flex items-center gap-2 px-4 py-3 border-b border-white/[0.06]" style={{ background: '#08081a' }}>
@@ -118,14 +108,12 @@ export default function Hero() {
               <div className="flex" style={{ height: '400px', background: '#07071a' }}>
                 {/* Sidebar */}
                 <div className="w-14 border-r border-white/[0.05] flex flex-col items-center py-4 gap-1 flex-shrink-0" style={{ background: '#040410' }}>
-                  {/* Brand mark */}
                   <div className="w-8 h-8 rounded-lg bg-[#f0a500] flex items-center justify-center mb-4 flex-shrink-0">
                     <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
                       <circle cx="7" cy="7" r="3" fill="#07071a" />
                       <circle cx="7" cy="7" r="6" stroke="#07071a" strokeWidth="1.5" />
                     </svg>
                   </div>
-                  {/* Nav items */}
                   {[
                     { active: true, d: 'M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z' },
                     { active: false, d: 'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2' },
@@ -151,7 +139,6 @@ export default function Hero() {
 
                 {/* Main content */}
                 <div className="flex-1 p-5 overflow-hidden">
-                  {/* Top bar */}
                   <div className="flex items-center justify-between mb-5">
                     <div>
                       <div className="text-[13px] font-bold text-white">Recruiter Dashboard</div>
@@ -163,7 +150,6 @@ export default function Hero() {
                     </div>
                   </div>
 
-                  {/* Metric cards */}
                   <div className="grid grid-cols-3 gap-2.5 mb-5">
                     {[
                       { label: 'New Matches', val: '29', delta: '+4 today', textColor: '#f0a500', borderColor: 'rgba(240,165,0,0.2)', bg: 'rgba(240,165,0,0.05)' },
@@ -178,13 +164,11 @@ export default function Hero() {
                     ))}
                   </div>
 
-                  {/* Candidates header */}
                   <div className="flex items-center justify-between mb-2.5">
                     <span className="text-[10px] text-[#334155] uppercase tracking-wider font-semibold">Top Candidate Matches</span>
                     <span className="text-[9px] text-[#f0a500] font-medium">Before posting →</span>
                   </div>
 
-                  {/* Candidate rows */}
                   <div className="space-y-2">
                     {[
                       { init: 'P', name: 'Priya S.', role: 'Frontend Eng.', tag: 'Low vision', score: 96, active: true },
@@ -193,7 +177,7 @@ export default function Hero() {
                     ].map(c => (
                       <div
                         key={c.name}
-                        className="flex items-center gap-2.5 px-3 py-2 rounded-xl border transition-colors"
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-xl border"
                         style={{
                           borderColor: c.active ? 'rgba(240,165,0,0.2)' : 'rgba(255,255,255,0.04)',
                           background: c.active ? 'rgba(240,165,0,0.04)' : 'rgba(255,255,255,0.015)',
@@ -220,10 +204,10 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Float: matched today */}
+            {/* Float cards */}
             <div
               className="absolute -bottom-5 -left-6 rounded-2xl border border-white/[0.07] px-4 py-3"
-              style={{ background: 'rgba(13,13,36,0.95)', backdropFilter: 'blur(20px)', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }}
+              style={{ background: 'rgba(13,13,36,0.95)', backdropFilter: 'blur(20px)', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}
             >
               <div className="text-[9px] text-[#475569] mb-2 uppercase tracking-wider">Matched today</div>
               <div className="flex items-center gap-2">
@@ -237,10 +221,9 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Float: match score */}
             <div
               className="absolute -top-5 -right-5 rounded-2xl border border-white/[0.07] px-4 py-3"
-              style={{ background: 'rgba(13,13,36,0.95)', backdropFilter: 'blur(20px)', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }}
+              style={{ background: 'rgba(13,13,36,0.95)', backdropFilter: 'blur(20px)', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}
             >
               <div className="text-[9px] text-[#475569] mb-1 uppercase tracking-wider">Avg. match score</div>
               <div className="flex items-end gap-1">

@@ -1,6 +1,6 @@
 export default function WINSection() {
   return (
-    <section className="py-20 px-6 border-t border-white/[0.04]" style={{ background: '#07071a' }}>
+    <section className="py-20 px-6" style={{ background: '#07071a', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
       <div className="max-w-7xl mx-auto text-center">
         <div
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/[0.08] mb-6"
@@ -12,30 +12,10 @@ export default function WINSection() {
           Powered by the Workforce Inclusion Network
         </h2>
         <p className="text-[15px] text-[#6b7280] max-w-2xl mx-auto mb-14 leading-relaxed">
-          WIN connects employers, governments, NGOs, and educational institutions into one coordinated ecosystem — creating a feedback loop that makes every stakeholder stronger.
+          Enterprise grade shared data layer with role based access, deployed for your institution. Our architectural foundation ensures security and cross-functional intelligence.
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-5">
-          {[
-            { icon: '🏢', label: 'Employers', stat: '3,400+', sub: 'Active hiring partners' },
-            { icon: '🎓', label: 'Universities', stat: '120+', sub: 'Institutional partners' },
-            { icon: '🤝', label: 'NGOs & Nodes', stat: '280+', sub: 'Service organizations' },
-            { icon: '🏛️', label: 'Governments', stat: '14', sub: 'Active regions' },
-          ].map(w => (
-            <div
-              key={w.label}
-              className="p-6 rounded-2xl border border-white/[0.07] text-center"
-              style={{ background: '#0d0d24' }}
-            >
-              <div className="text-3xl mb-3">{w.icon}</div>
-              <div className="text-2xl font-black text-white mb-1">{w.stat}</div>
-              <div className="text-sm font-semibold text-[#94a3b8] mb-1">{w.label}</div>
-              <div className="text-[11px] text-[#475569]">{w.sub}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* WIN feature strip */}
+        {/* 4 feature icons only */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {[
             {

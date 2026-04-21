@@ -13,7 +13,7 @@ const NAV = [
   },
   {
     heading: 'Regional Platforms',
-    links: ['Canada', 'United States', 'Africa', 'Spain', 'Saudi Arabia', 'Qatar'],
+    links: ['United States', 'Africa', 'Spain', 'Saudi Arabia', 'Qatar'],
   },
   {
     heading: 'Company',
@@ -35,7 +35,10 @@ export default function Footer() {
                   <circle cx="7" cy="7" r="6" stroke="#07071a" strokeWidth="1.5" />
                 </svg>
               </div>
-              <span className="font-bold text-white text-[15px]">EnabledTalent</span>
+              <span className="font-bold text-[15px]">
+                <span style={{ color: '#f0a500' }}>Enabled</span>
+                <span className="text-white">Talent</span>
+              </span>
             </div>
             <p className="text-[13px] text-[#475569] leading-relaxed mb-5 max-w-[260px]">
               Building Global Infrastructure for Inclusive Employment. An AI-powered workforce platform advancing equitable job access across employers, institutions, and governments worldwide.

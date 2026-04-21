@@ -7,6 +7,7 @@
   --navy: #07071a;
   --navy-2: #0d0d24;
   --navy-3: #12122e;
+  --page-bg: #eff4ff;
   --border: rgba(255,255,255,0.08);
   --muted: #6b7280;
 }
@@ -16,8 +17,8 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--navy);
-  color: #f1f5f9;
+  background: var(--page-bg);
+  color: #07071a;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -26,5 +27,5 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--navy); }
-::-webkit-scrollbar-thumb { background: #2a2a4a; border-radius: 3px; }
+::-webkit-scrollbar-track { background: #eff4ff; }
+::-webkit-scrollbar-thumb { background: #c8d5e8; border-radius: 3px; }
