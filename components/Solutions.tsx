@@ -8,7 +8,7 @@ const CARDS = [
         <path d="M6 12v5c3 3 9 3 12 0v-5" />
       </svg>
     ),
-    headline: 'Close the employment gap your campus is already accountable for.',
+    headline: 'Close the employment gap your campus is already accountable for',
     body: 'Only 33% of students with disabilities are employed within a year of graduation. Enabled Talent connects your career centre and disability services office into one gated system where your institution controls employer access, moderates every job posting, and owns its data with zero cross tenant leakage. NACE compliant reporting is built in.',
     stats: [{ val: '33%', label: 'employment gap to close' }, { val: '100%', label: 'institutional control' }],
     cta: 'See the Campus Solution',
@@ -24,7 +24,7 @@ const CARDS = [
         <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    headline: 'Replace spreadsheets with a system that connects your clients to employers directly.',
+    headline: 'Replace spreadsheets with a system that connects your clients to employers directly',
     body: 'Manage caseloads, track employer relationships, and report to funders from one platform. Each client\'s accommodation needs, job readiness, and placement status are visible in real time across your team.',
     stats: [{ val: '60%', label: 'less admin time' }, { val: '2.4x', label: 'more placements' }],
     cta: 'See the NGO Solution',
@@ -43,7 +43,7 @@ const CARDS = [
         <polygon points="12 2 20 7 4 7" />
       </svg>
     ),
-    headline: 'Fund employment programs and see exactly where every dollar goes.',
+    headline: 'Fund employment programs and see exactly where every dollar goes',
     body: 'Deploy regional or national inclusion strategies with built-in program accountability. Track outcomes across every service provider, employer, and candidate in your network with audit ready reporting and compliant funding allocation.',
     stats: [{ val: '100%', label: 'audit ready' }, { val: '5x', label: 'reporting speed' }],
     cta: 'See the Government Solution',
@@ -60,7 +60,7 @@ const CARDS = [
         <line x1="10" y1="14" x2="14" y2="14" />
       </svg>
     ),
-    headline: 'Hire inclusively without guessing what support looks like.',
+    headline: 'Hire inclusively without guessing what support looks like',
     body: 'Every candidate arrives with a completed accommodation profile and a connected support team. Your HR team receives pre matched candidates, onboarding guidance, and built in compliance reporting for AODA, ESG, and DEI commitments.',
     stats: [{ val: '40%', label: 'faster time to hire' }, { val: '0', label: 'onboarding gaps' }],
     cta: 'See the Employer Solution',
@@ -94,14 +94,14 @@ export default function Solutions() {
 
               {/* Headline */}
               <h3
-                className="font-bold mb-4 leading-snug"
-                style={{ fontSize: 'clamp(18px, 2vw, 26px)', color: '#07071a', letterSpacing: '-0.015em' }}
+                className="font-bold mb-5 leading-tight"
+                style={{ fontSize: 'clamp(28px, 3vw, 38px)', color: '#07071a', letterSpacing: '-0.02em' }}
               >
                 {card.headline}
               </h3>
 
               {/* Body */}
-              <p className="text-[14px] leading-[1.75] mb-6 flex-1" style={{ color: '#6b7280' }}>
+              <p className="text-[14px] leading-[1.75] mb-7 flex-1" style={{ color: '#6b7280' }}>
                 {card.body}
               </p>
 
@@ -110,8 +110,8 @@ export default function Solutions() {
                 {card.stats.map(stat => (
                   <div
                     key={stat.label}
-                    className="flex items-center gap-1.5 px-3.5 py-2 rounded-full"
-                    style={{ background: 'rgba(7,7,26,0.05)', border: '1px solid rgba(7,7,26,0.08)' }}
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-full"
+                    style={{ background: '#f3f4f6', border: '1px solid rgba(0,0,0,0.08)' }}
                   >
                     <span className="text-[15px] font-black" style={{ color: '#07071a' }}>{stat.val}</span>
                     <span className="text-[12px]" style={{ color: '#6b7280' }}>{stat.label}</span>
