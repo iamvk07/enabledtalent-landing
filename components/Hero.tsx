@@ -59,25 +59,6 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Partner badges */}
-            <div>
-              <p className="text-[10px] uppercase tracking-[0.18em] font-bold mb-5" style={{ color: '#9ca3af' }}>
-                Backed by the world&apos;s leading programs
-              </p>
-              <div className="flex items-end gap-8 flex-wrap">
-                {[
-                  { name: 'NVIDIA', program: 'Inception' },
-                  { name: 'AWS', program: 'Startups' },
-                  { name: 'Microsoft', program: 'for Startups' },
-                  { name: 'UNICEF', program: 'Startup Lab' },
-                ].map(l => (
-                  <div key={l.name} className="flex flex-col gap-0.5">
-                    <span className="text-[13px] font-black leading-none" style={{ color: '#6b7280' }}>{l.name}</span>
-                    <span className="text-[9px] font-semibold tracking-wider uppercase leading-none" style={{ color: '#9ca3af' }}>{l.program}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* ─── RIGHT: Dashboard Mockup (dark card = contrast element per Figma) ─── */}
