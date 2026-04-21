@@ -2,14 +2,12 @@ export default function MediaMentions() {
   return (
     <section className="py-10 px-6" style={{ background: '#ffffff', borderTop: '1px solid rgba(0,0,0,0.06)', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col items-center gap-6">
-          <p className="text-[10px] uppercase tracking-[0.18em] font-bold" style={{ color: '#9ca3af' }}>
-            Trusted by organizations building the future of work
+        <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
+          <p className="text-[10px] uppercase tracking-[0.18em] font-bold whitespace-nowrap flex-shrink-0" style={{ color: '#9ca3af' }}>
+            Trusted by organizations<br className="hidden sm:block" /> building the future of work
           </p>
-          <p className="text-[13px] font-medium" style={{ color: '#6b7280' }}>
-            Universities, governments, and partners across the world
-          </p>
-          <div className="flex items-center gap-10 flex-wrap justify-center mt-2">
+          <div className="w-px h-5 hidden sm:block flex-shrink-0" style={{ background: 'rgba(0,0,0,0.1)' }} />
+          <div className="flex items-center gap-8 flex-wrap justify-center sm:justify-start">
 
             {/* Digital Journal */}
             <div className="flex items-center gap-1.5">

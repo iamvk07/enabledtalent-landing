@@ -1,6 +1,6 @@
 export default function WINSection() {
   return (
-    <section className="py-20 px-6" style={{ background: '#07071a', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+    <section className="py-16 px-6" style={{ background: '#07071a', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
       <div className="max-w-7xl mx-auto text-center">
         <div
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/[0.08] mb-6"

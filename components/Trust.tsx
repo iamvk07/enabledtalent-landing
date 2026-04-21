@@ -42,7 +42,7 @@ const PILLARS = [
       </svg>
     ),
     title: 'Portable Identity',
-    body: 'Unique Identity Protocol allows accommodation records to travel with talent globally, eliminating disclosure fatigue and accelerating onboarding.',
+    body: 'Unique Identity Protocol allows accommodation records to travel with talent globally, eliminating disclosure fatigue and accelerating onboarding at every new employer.',
     activeBadge: true,
     highlight: false,
   },
@@ -55,7 +55,7 @@ export default function Trust() {
       <section className="py-14 px-6" style={{ background: '#ffffff', borderTop: '1px solid rgba(0,0,0,0.06)' }}>
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-[11px] uppercase tracking-[0.18em] font-bold mb-8" style={{ color: '#9ca3af' }}>
-            As featured in
+            Trusted by organizations building the future of work
           </p>
           <div className="flex flex-wrap justify-center items-center gap-10">
 
@@ -154,7 +154,7 @@ export default function Trust() {
                   {p.icon}
                 </div>
                 <h3 className="text-sm font-bold mb-2" style={{ color: '#07071a' }}>{p.title}</h3>
-                <p className="text-[13px] leading-relaxed mb-3" style={{ color: '#6b7280' }}>{p.body}</p>
+                <p className="text-[13px] leading-relaxed mb-3" style={{ color: '#6b7280', textDecoration: 'none' }}>{p.body}</p>
 
                 {p.badges && (
                   <div className="flex gap-1.5 flex-wrap">

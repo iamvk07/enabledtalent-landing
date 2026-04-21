@@ -270,7 +270,7 @@ export default function HowItWorks() {
   const tab = TABS[active]
 
   return (
-    <section id="how-it-works" className="scroll-mt-16 py-24 px-6" style={{ background: '#07071a', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+    <section id="how-it-works" className="scroll-mt-16 py-16 px-6" style={{ background: '#07071a', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
