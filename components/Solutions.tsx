@@ -27,7 +27,6 @@ function UniversitiesVisual() {
                 className="w-full rounded-t"
                 style={{ height: `${b.hPx}px`, background: b.active ? '#f0a500' : '#1f2937' }}
               />
-              <span className="text-[10px]" style={{ color: '#9ca3af' }}>{b.yr}</span>
             </div>
           ))}
         </div>
