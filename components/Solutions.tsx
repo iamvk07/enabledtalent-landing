@@ -7,17 +7,17 @@ function UniversitiesVisual() {
         <span className="text-[14px] font-semibold" style={{ color: '#374151' }}>Employment Gap</span>
       </div>
       <div className="text-[10px] font-semibold uppercase tracking-wider mb-4 text-right" style={{ color: '#9ca3af' }}>TARGET</div>
-      <div className="flex items-end gap-3 h-28">
+      <div className="flex items-end gap-3" style={{ height: '112px' }}>
         {[
-          { h: '45%', yr: '2021', active: false },
-          { h: '62%', yr: '2022', active: false },
-          { h: '78%', yr: '2023', active: false },
-          { h: '100%', yr: '2024', active: true },
+          { hPx: 50, yr: '2021', active: false },
+          { hPx: 70, yr: '2022', active: false },
+          { hPx: 88, yr: '2023', active: false },
+          { hPx: 112, yr: '2024', active: true },
         ].map(b => (
-          <div key={b.yr} className="flex-1 flex flex-col items-center gap-1.5">
+          <div key={b.yr} className="flex-1 flex flex-col items-center gap-1.5" style={{ alignSelf: 'flex-end' }}>
             <div
               className="w-full rounded-t-lg"
-              style={{ height: b.h, background: b.active ? '#f0a500' : '#1f2937' }}
+              style={{ height: `${b.hPx}px`, background: b.active ? '#f0a500' : '#1f2937' }}
             />
             <span className="text-[10px]" style={{ color: '#6b7280' }}>{b.yr}</span>
           </div>
