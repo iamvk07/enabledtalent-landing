@@ -1,27 +1,36 @@
 function UniversitiesVisual() {
+  const bars = [
+    { hPx: 68, yr: '2021', active: false },
+    { hPx: 50, yr: '2022', active: false },
+    { hPx: 112, yr: '2023', active: true },
+    { hPx: 72, yr: '2024', active: false },
+  ]
   return (
     <div className="rounded-2xl p-6" style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.1)', boxShadow: '0 4px 24px rgba(0,0,0,0.08)' }}>
       <div className="text-[10px] font-semibold uppercase tracking-wider mb-1" style={{ color: '#9ca3af' }}>CURRENT METRIC</div>
-      <div className="flex items-baseline gap-2 mb-1">
+      <div className="flex items-baseline gap-2 mb-4">
         <span className="text-[32px] font-black" style={{ color: '#f0a500' }}>33%</span>
         <span className="text-[14px] font-semibold" style={{ color: '#374151' }}>Employment Gap</span>
       </div>
-      <div className="text-[10px] font-semibold uppercase tracking-wider mb-4 text-right" style={{ color: '#9ca3af' }}>TARGET</div>
-      <div className="flex items-end gap-3" style={{ height: '112px' }}>
-        {[
-          { hPx: 50, yr: '2021', active: false },
-          { hPx: 70, yr: '2022', active: false },
-          { hPx: 88, yr: '2023', active: false },
-          { hPx: 112, yr: '2024', active: true },
-        ].map(b => (
-          <div key={b.yr} className="flex-1 flex flex-col items-center gap-1.5" style={{ alignSelf: 'flex-end' }}>
-            <div
-              className="w-full rounded-t-lg"
-              style={{ height: `${b.hPx}px`, background: b.active ? '#f0a500' : '#1f2937' }}
-            />
-            <span className="text-[10px]" style={{ color: '#6b7280' }}>{b.yr}</span>
-          </div>
-        ))}
+      {/* Chart area */}
+      <div className="relative" style={{ height: '130px' }}>
+        {/* TARGET label + red indicator line on the right */}
+        <div className="absolute top-0 right-0 flex flex-col items-end">
+          <span className="text-[9px] font-semibold uppercase tracking-wider" style={{ color: '#9ca3af' }}>TARGET</span>
+          <div style={{ width: '1px', height: '112px', background: '#ef4444', marginTop: '2px' }} />
+        </div>
+        {/* Bars */}
+        <div className="flex items-end gap-3 h-full pr-6">
+          {bars.map(b => (
+            <div key={b.yr} className="flex-1 flex flex-col items-center gap-1.5" style={{ alignSelf: 'flex-end' }}>
+              <div
+                className="w-full rounded-t"
+                style={{ height: `${b.hPx}px`, background: b.active ? '#f0a500' : '#1f2937' }}
+              />
+              <span className="text-[10px]" style={{ color: '#9ca3af' }}>{b.yr}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
